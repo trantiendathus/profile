@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Trần Tiến Đạt</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="profile-container">
+        <img src="https://lh3.googleusercontent.com/d/11viN9nV9NCmJ9YgyWjjpfoIzk4Db1YLW" alt="Avatar" class="avatar">
+        <div class="profile-name">Trần Tiến Đạt</div>
+        <div id="clock" class="clock"></div>
+        <div id="date" class="date"></div>
+        <div id="music-info" class="music-info">Loading...</div>
+        <audio id="background-music" autoplay loop>
+            <source src="" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+        <button id="toggle-music" class="toggle-button">Tắt nhạc</button>
+        <div class="music-select">
+            <label for="track-select">Chọn bài hát:</label>
+            <select id="track-select">
+                <option value="https://files.catbox.moe/ide3uy.mp3">Đừng làm trái tim anh đau</option>
+                <option value="https://files.catbox.moe/typrw7.mp3">Nhạc Tự Làm</option>
+                <option value="https://files.catbox.moe/qtjs50.mp3">Một đường nở hoa</option>
+            </select>
+        </div>
+        <button id="random-track" class="toggle-button">Phát nhạc ngẫu nhiên</button>
+        <button id="toggle-theme" class="toggle-button">Chế độ tối</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
