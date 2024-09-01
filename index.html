@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trần Tiến Đạt</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="https://lh3.googleusercontent.com/d/11viN9nV9NCmJ9YgyWjjpfoIzk4Db1YLW" type="image/png">
+</head>
+<body>
+    <header>
+        <div id="realTimeClock"></div>
+        <div id="currentDate"></div>
+    </header>
+    <main>
+        <div class="container">
+            <img src="https://lh3.googleusercontent.com/d/11viN9nV9NCmJ9YgyWjjpfoIzk4Db1YLW" alt="Avatar" class="avatar">
+            <p class="welcome-message">Chào, tớ là Trần Tiến Đạt!</p>
+            
+            <!-- Box Nhà Vật lý luôn hiển thị -->
+            <div class="box" id="nobelPhysicist">
+                <h2 style="color: #FFD700;">Nhà Vật lý đoạt giải Nobel</h2>
+                <p id="nobelDetails">Đang tải thông tin nhà vật lý...</p>
+            </div>
+            
+            <!-- Kết quả -->
+            <div class="box hidden" id="ageResult">Tuổi dương lịch của bạn là: </div>
+            <div class="box hidden" id="zodiacResult">Cung hoàng đạo của bạn là: </div>
+            <div class="box hidden" id="zodiacIcon"></div>
+
+            <!-- Form nhập ngày sinh -->
+            <div class="input-container">
+                <label for="birthdate">Nhập ngày sinh của bạn (dd/mm/yyyy):</label>
+                <input type="text" id="birthdate" placeholder="dd/mm/yyyy">
+                <button onclick="calculateAge()">Tính tuổi</button>
+            </div>
+
+            <!-- Phát nhạc -->
+            <div class="box music-controls">
+                <label for="musicList">Chọn nhạc:</label>
+                <select id="musicList" onchange="changeMusic()">
+                    <option value="https://files.catbox.moe/ide3uy.mp3">Đừng làm trái tim anh đau</option>
+                    <option value="https://files.catbox.moe/typrw7.mp3">Nhạc Tự Làm</option>
+                    <option value="https://files.catbox.moe/qtjs50.mp3">Một đường nở hoa</option>
+                </select>
+                <button id="toggleMusic" onclick="toggleMusic()">Tắt Nhạc</button>
+                <div id="currentTrack">Đang phát: Đừng làm trái tim anh đau</div>
+                <audio id="musicPlayer" autoplay loop>
+                    <source src="https://files.catbox.moe/ide3uy.mp3" type="audio/mp3">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+
+            <!-- Box liên kết xã hội -->
+            <div class="box social-links">
+                <h2>Contact</h2>
+                <a href="https://www.facebook.com/profile.php?id=100008626337575" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook">
+                </a>
+                <a href="https://www.instagram.com/trantiendathus/" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
+                </a>
+                <a class="button" href="https://docs.google.com/spreadsheets/d/1RCeCHT6ilEeOjGhnGIS19YilOsKBFXLJprSaXpteT7A/edit?gid=0#gid=0" target="_blank">
+                    Tổng hợp môn
+                </a>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>Copyright © Trần Tiến Đạt</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
